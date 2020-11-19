@@ -3,11 +3,13 @@
 
 #include "framework.h"
 #include "이진트리_WinAPI.h"
+#include "CBinaryTree.h"
 
 HINSTANCE g_Inst;
 LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
 
-
+CBinaryTree g_Tree;
+bool g_init = false;
 
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     _In_opt_ HINSTANCE hPrevInstance,
@@ -51,6 +53,21 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     }
 
 
+
+    g_Tree.InsertNode(100);
+    g_Tree.InsertNode(50);
+    g_Tree.InsertNode(150);
+    g_Tree.InsertNode(40);
+    g_Tree.InsertNode(70);
+    g_Tree.InsertNode(110);
+    g_Tree.InsertNode(105);
+    g_Tree.InsertNode(103);
+    g_Tree.InsertNode(160);
+    g_Tree.InsertNode(170);
+    g_Tree.InsertNode(120);
+    g_Tree.InsertNode(115);
+    g_Tree.InsertNode(117);
+
     ShowWindow(hWnd, nCmdShow);
 
     UpdateWindow(hWnd);
@@ -84,7 +101,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     {
     case WM_CREATE:
     {
-
+        g_init = true;
     }
     break;
 
@@ -92,6 +109,12 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     {
         PAINTSTRUCT ps;
         HDC hdc = BeginPaint(hWnd, &ps);
+        if(g_init == true)
+            g_Tree.GDIPrint(hWnd);
+        //Ellipse(hdc, 150, 0, 200, 50);
+        //TextOut(hdc, 160, 20, L"Hello", 5);
+        //Ellipse(hdc, 100, 50, 150, 100);
+        //Ellipse(hdc, 200, 50, 250, 100);
         EndPaint(hWnd, &ps);
     }
     break;
