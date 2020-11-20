@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="CBinaryTree.cpp">
+      <Filter>CBinaryTree</Filter>
+    </ClCompile>
+    <ClCompile Include="이진트리_WinAPI.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="CBinaryTree.h">
+      <Filter>CBinaryTree</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="이진트리_WinAPI.h">
+      <Filter>Hide</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico" />
+    <Image Include="이진트리_WinAPI.ico">
+      <Filter>Hide</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CBinaryTree">
+      <UniqueIdentifier>{56586e16-5b55-4fa1-889c-a9972bc655e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{c5320f51-6aa0-43aa-8b87-b4515524b2b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{4dc95cce-b3d8-423e-93ec-b7322f3d3221}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hide">
+      <UniqueIdentifier>{fe3fe19d-154b-42be-96e6-3d20dc879d86}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="이진트리_WinAPI.rc">
+      <Filter>Hide</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
